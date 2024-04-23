@@ -1,0 +1,14 @@
+.admin_header{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:#aaaaaa;
+    font-size: 36px;
+    color: #2c3e50;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.cartimg{
+    width:50px;
+    height: 50px;
+
+}

@@ -1,0 +1,69 @@
+.home-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.loader{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardDetails {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dish-image {
+    width: 100%;
+    height: auto;
+}
+
+.dish-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.dish-details h2 {
+    margin-top: 0;
+}
+
+.dish-details p {
+    margin-bottom: 5px;
+}
+.food-name{
+    text-align: left;
+}
+.foodImage{
+    width: 200px;
+    height: 200px;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 100px;
+    
+}
+.itemCard{
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.addBtn{
+    align-self: flex-end;
+    width: 200px;
+}
+.addBtn:active {
+    transform: scale(1.1); /* Scale up the button when active (clicked) */
+}

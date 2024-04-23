@@ -1,0 +1,29 @@
+.bodyData{
+    margin-top: 100px;
+}
+.dish{
+    background-color: antiquewhite;
+    max-width: 33%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.cart_head{
+    font-family: 'Open Sans', sans-serif;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+a{
+    color: rgb(255, 255, 255); /* Change the color to black */
+    text-decoration: none; /* Remove underline */
+  }
