@@ -60,10 +60,10 @@ ul{
     border: 1px solid gray;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.addBtn{
+button{
     align-self: flex-end;
-    width: 200px;
+    width: 100%;
 }
-.addBtn:active {
+button:active {
     transform: scale(1.1); /* Scale up the button when active (clicked) */
 }

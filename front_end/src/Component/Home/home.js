@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Audio } from 'react-loader-spinner'
 import { UserContext } from '../../Context/context';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/header';
+import DishCard from '../DishCard/dishCard';
 import './home.css';
 
 const Home = () => {
@@ -43,8 +45,11 @@ const Home = () => {
 
     const { updateCart, storeData } = useContext(UserContext);
 
+    
+
     function addToCart(item) {
         updateCart(item)
+        
 
     }
 
@@ -77,28 +82,8 @@ const Home = () => {
                         <Header />
                         <ul >
                             {data.map(item => (
-                                <li key={item.dish_id} >
-                                    <div className='itemCard'>
-                                        <div className='w-100 cardDetails '>
-                                            <div>
-                                                <h2 className='food-name'>{item.dish_name}</h2>
-                                                <p><b>Price:</b> {item.dish_price} {item.dish_currency}</p>
-                                                <p><b>Calories:</b> {item.dish_calories}</p>
-                                                <p><b>Description:</b> {item.dish_description}</p>
-                                            </div>
-                                            <div>
-                                                <img className='foodImage' src={item.dish_image} alt={item.dish_name} />
-                                            </div>
-
-                                        </div>
-                                        <div className='mt-2 addBtn'>
-                                            <button onClick={() => addToCart(item.dish_id)}> Add To Cart</button>
-                                        </div>
-
-                                    </div>
-
-
-                                </li>
+                                <DishCard key={item.dish_id} dish={item}  itemsAddToCart={addToCart}/>
+                                
                             ))}
                         </ul>
                     </div>

@@ -14,6 +14,12 @@
     transition: all 300ms ease;
     z-index: 10;
 }
+.user_name{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+}
 
 .admin_btn {
     background-color: gray !important;
@@ -21,15 +27,17 @@
 
 .restaurant-name {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 36px;
-    color: #2c3e50;
+    font-size: 40px;
+    color: #c7c7c7;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-shadow: -8px 5px 5px rgba(53, 53, 53, 1);
 }
 
 .cart {
     border-radius: 15px;
+    height: 80px;
     border: none;
     color: rgb(255, 255, 255);
 
@@ -37,7 +45,8 @@
 }
 
 .logOut {
-    font-size: small;
+    height: 80px;
+    font-size: medium;
     border-radius: 15px;
     text-align: revert;
 }

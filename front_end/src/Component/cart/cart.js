@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { UserContext } from '../../Context/context';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/header';
+import BillPayment from '../BilPayment/bilPayment'
 import './cart.css'
 
 const Cart = () => {
@@ -10,7 +11,7 @@ const Cart = () => {
     const navigate = useNavigate();
     const { cart, foodData, updateCart } = useContext(UserContext);
     const [orderFailed, setOrderFailled] = useState(false);
-
+    
     const cartListItems = []
 
     foodData.forEach(element => {
@@ -47,32 +48,7 @@ const Cart = () => {
             <Header />
             <div className='bodyData' >
                 <h2 className='cart_Head mt-4'>Your Cart Items</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Dish Name</th>
-                            <th>Calories</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {cartListItems.map(each => (
-                            <tr>
-                                <td>{each.dish_name}</td>
-                                <td>{each.dish_calories}</td>
-                                <td>{each.dish_price}</td>
-                            </tr>
-                        ))}
-
-
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td colspan="2"><strong>Total:</strong></td>
-                            <td><strong>{cartListItems.reduce((total, each) => total + each.dish_price, 0).toFixed(2)}</strong></td>
-                        </tr>
-                    </tfoot>
-                </table>
+                <BillPayment dishes={cartListItems}/>
                 <div className='d-flex gap-4'>
                     <button className='mt-3' onClick={addItemToCart}>Add More Items to Cart</button>
                     <button className='mt-3 bg-danger' onClick={clearCart}>Clear Cart</button>
